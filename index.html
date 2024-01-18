@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,24 +8,42 @@
     <title>Document</title>
 
     <style>
-        
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
-        
+
         body {
-            background-color:  rgb(249, 247, 247);
+            background-color: rgb(219, 226, 239);
         }
 
-        div {
+        #container {
+            background-color: rgb(249, 247, 247);
+            margin-top: 10%;
+            margin-left: 25%;
             display: flex;
             justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border: 5px groove rgb(17, 45, 78);
+            border-radius: 10px;
+            padding-bottom: 100px;
+            height: 40vh;
+            width: 90vh;
+
+
+
+        }
+
+        #content {
+            display: flex;
+
+
         }
 
         h1 {
-            background-color:  rgb(219, 226, 239);
+            background-color: rgb(219, 226, 239);
             text-align: center;
             color: rgb(17, 45, 78);
             margin: 10vh 10vh;
@@ -33,9 +52,12 @@
             border-radius: 20px;
             padding: 20px;
             width: 80vh;
+            text-decoration: underline;
+
         }
 
         #btn {
+            display: flex;
             gap: 80px;
         }
 
@@ -44,27 +66,31 @@
             justify-content: center;
             align-items: center;
             background-color: rgb(63, 114, 175);
-            color:rgb(17, 45, 78) ;
+            color: rgb(17, 45, 78);
             font-size: 1.2em;
             font-weight: 600;
             border-radius: 10px;
             border: 3px solid rgb(17, 45, 78);
             width: 150px;
             height: 60px;
+
         }
 
         button:hover {
             transition: 0.5s;
             background-color: rgb(219, 226, 239);
+
         }
-        
     </style>
 
+
 </head>
-    
-    <body>
-    
-        <div>
+
+<body>
+
+    <div id="container">
+
+        <div id="content">
             <h1>"JavaScript addEventListener() Hands-On"</h1>
         </div>
         <div id="btn">
@@ -72,28 +98,27 @@
             <button id="btn2">Button 2</button>
             <button id="btn3">Button 3</button>
         </div>
-        
-    
-        <script>
-            
-            function button1Click() {
-                alert("Button 1 was clicked!");
-            }
-    
-            function button2Click() {
-                alert("Button 2 was clicked!");
-            }
-    
-            function button3Click() {
-                alert("Button 3 was clicked!");
-            }
-    
-            document.getElementById("btn1").addEventListener("click", button1Click);
-            document.getElementById("btn2").addEventListener("click", button2Click);
-            document.getElementById("btn3").addEventListener("click", button3Click);
-            
-        </script>
+    </div>
 
-        
-    </body>
+    <script>
+        function button1Click() {
+            alert("Button 1 was clicked!");
+        }
+
+        function button2Click() {
+            alert("Button 2 was clicked!");
+        }
+
+        function button3Click() {
+            alert("Button 3 was clicked!");
+        }
+
+        document.getElementById("btn1").addEventListener("click", button1Click);
+        document.getElementById("btn2").addEventListener("click", button2Click);
+        document.getElementById("btn3").addEventListener("click", button3Click);
+
+    </script>
+
+</body>
+
 </html>
